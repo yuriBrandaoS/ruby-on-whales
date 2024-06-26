@@ -8,6 +8,7 @@ node_modules/
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+development.log
 /tmp
 
 # Ignore .env file (sensitive information).
