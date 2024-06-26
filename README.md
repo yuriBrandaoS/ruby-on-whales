@@ -1,61 +1,43 @@
-Aplicação Ruby on Rails com Docker
-Este repositório contém uma aplicação Ruby on Rails configurada para ser executada com Docker. O objetivo é facilitar o desenvolvimento e a execução da aplicação em diferentes ambientes de forma consistente.
+# Ruby on Rails Application with Docker
 
-Requisitos
-Docker
-Docker Compose
-Configuração inicial
-Para começar, siga os passos abaixo:
+Este repositório contém uma aplicação Ruby on Rails configurada para ser executada com Docker, utilizando um contêiner para a aplicação Rails e outro para o banco de dados PostgreSQL.
 
-Clone o repositório:
+## Pré-requisitos
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+Para executar esta aplicação localmente, você precisa ter instalado:
+
+- Docker
+- Docker Compose
+
+Certifique-se de ter esses requisitos instalados antes de prosseguir.
+
+## Configuração do Ambiente
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+
 Crie o arquivo .env:
 
-Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+Crie um arquivo .env na raiz do projeto com as seguintes variáveis de ambiente:
 
-makefile
-Copiar código
 POSTGRES_USER=app_user
 POSTGRES_PASSWORD=123456
 POSTGRES_HOST=postgres
-Você pode ajustar as variáveis conforme necessário.
 
-Inicie os containers:
+Altere as variáveis conforme necessário para o seu ambiente.
 
-Copiar código
+Iniciando a Aplicação
+
+Para iniciar a aplicação, execute o seguinte comando:
+
 docker-compose up
-Acesse a aplicação:
 
-A aplicação estará disponível em http://localhost:3000.
+Isso criará os contêineres necessários para a aplicação Rails e o banco de dados PostgreSQL, e iniciará a aplicação na porta 3000.
 
-Comandos úteis do Docker
-Para parar os containers:
+Acessando a Aplicação
+Após iniciar a aplicação, você pode acessá-la em seu navegador através do seguinte URL:
+http://localhost:3000
 
-Copiar código
-docker-compose down
-Para acessar o shell do container da aplicação:
-
-arduino
-Copiar código
-docker-compose run web bash
-Para limpar todos os volumes, redes e containers não utilizados:
-
-go
-Copiar código
-make clean
-Contribuindo
-Se você gostaria de contribuir com este projeto, siga estas etapas:
-
-Fork o repositório
-Crie uma branch para sua feature (git checkout -b feature/sua-feature)
-Commit suas mudanças (git commit -am 'Adiciona uma nova funcionalidade')
-Push para a branch (git push origin feature/sua-feature)
-Crie um novo Pull Request
-Licença
-Este projeto está licenciado sob a Licença XYZ. Veja o arquivo LICENSE.md para mais detalhes.
-
-A estrutura acima fornece um guia básico para configurar, executar e contribuir com a aplicação utilizando Docker. Personalize-o conforme as necessidades específicas do seu projeto, incluindo informações adicionais relevantes.
